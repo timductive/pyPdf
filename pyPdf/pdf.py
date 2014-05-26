@@ -1404,8 +1404,6 @@ class PageObject(DictionaryObject):
                         text += i
             elif operator == 'EMC':
                 temp = text.strip()
-                print 'prev text'
-                print temp[-4:]
                 if temp[-4:] != sep:
                     text += sep
 
