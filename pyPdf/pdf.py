@@ -1406,8 +1406,10 @@ class PageObject(DictionaryObject):
                 temp = text.strip()
                 if temp[-4:] != sep:
                     text += sep
-
-        return text.decode('unicode_escape')
+        try:
+            return text.decode('unicode_escape')
+        except:
+            return text
     ##
     # A rectangle (RectangleObject), expressed in default user space units,
     # defining the boundaries of the physical medium on which the page is
